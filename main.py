@@ -6,6 +6,7 @@ import folium
 import json
 import os
 import math
+import random  # <--- เพิ่มบรรทัดนี้ครับ
 from streamlit_folium import st_folium
 
 # --- 1. ตั้งค่าหน้าเว็บ ---
@@ -166,7 +167,7 @@ with st.sidebar:
             "id": f"sim_{int(datetime.datetime.now().timestamp())}",
             "place": "SIMULATION HIGH RISK ZONE",
             "country": "Simulation Land",
-            "mag": random.uniform(7.0, 9.0),
+            "mag": random.uniform(7.0, 9.0), # <--- จุดที่เคย Error ตอนนี้หายแล้วครับเพราะ import random แล้ว
             "time_stamp": datetime.datetime.now().timestamp() * 1000,
             "time": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             "lat": random.uniform(-20, 20), "lon": random.uniform(120, 150),
