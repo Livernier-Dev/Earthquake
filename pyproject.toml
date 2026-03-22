@@ -1,0 +1,19 @@
+[project]
+name = "Earthquake AI Monitor"
+version = "0.1.0"
+description = "Global Earthquake Monitor & AI Risk Prediction"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "flask>=3.0.0",
+    "requests",
+]
+
+[project.scripts]
+# นี่คือจุดสำคัญที่ Error ของคุณถามหา! 
+# รูปแบบคือ: ชื่อคำสั่ง = "ชื่อไฟล์:ชื่อฟังก์ชันที่จะรัน"
+app = "app:app"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
